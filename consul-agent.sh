@@ -1,4 +1,4 @@
-sudo apt-get -y update
+#sudo apt-get -y update
 sudo apt-get -y install unzip
 cd /usr/local/bin/
 sudo wget https://dl.bintray.com/mitchellh/consul/0.5.2_linux_amd64.zip
