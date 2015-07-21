@@ -1,0 +1,10 @@
+{
+  "service": {
+    "name": "mysql",
+    "tags": [
+      "mysql", "database"
+    ],
+    "port": 80,
+	"check": {"script": "mysql >/dev/null", "interval": "10s"}
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "bootstrap": true,
+    "server": true,
+    "datacenter": "aws",
+    "data_dir": "/var/consul",
+    "encrypt": "B0m+DNV8fdVQoq4vcjc/ZQ==",
+    "log_level": "INFO",
+    "enable_syslog": true,
+    "bind_addr": "0.0.0.0",
+	"advertise_addr": "172.17.8.101"
+
+
+ }

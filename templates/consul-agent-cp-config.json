@@ -1,0 +1,16 @@
+{
+    "server": false,
+    "datacenter": "aws",
+    "data_dir": "/var/consul",
+    "ui_dir": "/home/consul/dist",
+    "encrypt": "B0m+DNV8fdVQoq4vcjc/ZQ==",
+    "log_level": "INFO",
+    "enable_syslog": true,
+    "bind_addr": "0.0.0.0",
+	"advertise_addr": "172.17.8.108",
+  "addresses" : {
+    "http": "172.17.8.108"
+  },
+
+    "start_join": ["consul1.dualspark-dev.com", "consul2.dualspark-dev.com", "consul3.dualspark-dev.com"]
+}
