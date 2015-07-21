@@ -42,7 +42,7 @@ Vagrant.configure(2) do |config|
     web1.landrush.tld = 'dualspark-dev.com'
     web1.vm.hostname = "web1.dualspark-dev.com"
     web1.vm.network "private_network", ip: "172.17.8.104"
-    web1.vm.provision :shell, path: "consul-agent.sh"
+    web1.vm.provision :shell, path: "consul-agent-web.sh"
     web1.vm.synced_folder ".", "/opt/app"
 
   end
@@ -53,7 +53,7 @@ config.vm.define "jenkins" do |jenkins|
     jenkins.landrush.tld = 'dualspark-dev.com'
     jenkins.vm.hostname = "jenkins.dualspark-dev.com"
     jenkins.vm.network "private_network", ip: "172.17.8.105"
-    jenkins.vm.provision :shell, path: "consul-agent.sh"
+    jenkins.vm.provision :shell, path: "consul-agent-jenkins.sh"
     jenkins.vm.synced_folder ".", "/opt/app"
 
   end
@@ -64,7 +64,7 @@ config.vm.define "ns1" do |ns1|
     ns1.landrush.tld = 'dualspark-dev.com'
     ns1.vm.hostname = "ns1.dualspark-dev.com"
     ns1.vm.network "private_network", ip: "172.17.8.106"
-    ns1.vm.provision :shell, path: "bind-server.sh"
+    ns1.vm.provision :shell, path: "consul-agent-ns1.sh"
     ns1.vm.synced_folder ".", "/opt/app"
 
   end
@@ -74,7 +74,7 @@ config.vm.define "ns2" do |ns2|
     ns2.landrush.tld = 'dualspark-dev.com'
     ns2.vm.hostname = "ns2.dualspark-dev.com"
     ns2.vm.network "private_network", ip: "172.17.8.107"
-    ns2.vm.provision :shell, path: "bind-server.sh"
+    ns2.vm.provision :shell, path: "consul-agent-ns2.sh"
     ns2.vm.synced_folder ".", "/opt/app"
 
   end
