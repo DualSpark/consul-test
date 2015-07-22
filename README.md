@@ -35,7 +35,11 @@ sudo start consul
 
 ## Start the agents
 SSH into each agent jenkins, web1, ns1,ns2,cpanel
+<<<<<<< HEAD
 ```
+=======
+``` bash
+>>>>>>> master
 sudo start consul
 ```
 
