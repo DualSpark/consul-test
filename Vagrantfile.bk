@@ -2,12 +2,10 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-config.landrush.enabled = true
-
-config.landrush.guest_redirect_dns = false
 
   config.vm.define "consulserver1", primary: true do |consulserver1|
     consulserver1.vm.box = "ubuntu/trusty64"
+    consulserver1.landrush.enabled = true
     consulserver1.landrush.tld = 'dualspark-dev.com'
     consulserver1.vm.hostname = "consul1.dualspark-dev.com"
     consulserver1.vm.network :private_network, ip: "172.17.8.101"
@@ -18,6 +16,7 @@ config.landrush.guest_redirect_dns = false
 
   config.vm.define "consulserver2" do |consulserver2|
     consulserver2.vm.box = "ubuntu/trusty64"
+    consulserver2.landrush.enabled = true
     consulserver2.landrush.tld = 'dualspark-dev.com'
     consulserver2.vm.hostname = "consul2.dualspark-dev.com"
     consulserver2.vm.network "private_network", ip: "172.17.8.102"
@@ -28,6 +27,7 @@ config.landrush.guest_redirect_dns = false
 
   config.vm.define "consulserver3" do |consulserver3|
     consulserver3.vm.box = "ubuntu/trusty64"
+    consulserver3.landrush.enabled = true
     consulserver3.landrush.tld = 'dualspark-dev.com'
     consulserver3.vm.hostname = "consul3.dualspark-dev.com"
     consulserver3.vm.network "private_network", ip: "172.17.8.103"
@@ -38,6 +38,7 @@ config.landrush.guest_redirect_dns = false
 
   config.vm.define "web1" do |web1|
     web1.vm.box = "avenuefactory/lamp"
+    web1.landrush.enabled = true
     web1.landrush.tld = 'dualspark-dev.com'
     web1.vm.hostname = "web1.dualspark-dev.com"
     web1.vm.network "private_network", ip: "172.17.8.104"
@@ -48,6 +49,7 @@ config.landrush.guest_redirect_dns = false
 
 config.vm.define "jenkins" do |jenkins|
     jenkins.vm.box = "DJenkinsDev/VagrantPHP"
+    jenkins.landrush.enabled = true
     jenkins.landrush.tld = 'dualspark-dev.com'
     jenkins.vm.hostname = "jenkins.dualspark-dev.com"
     jenkins.vm.network "private_network", ip: "172.17.8.105"
@@ -58,6 +60,7 @@ config.vm.define "jenkins" do |jenkins|
 
 config.vm.define "ns1" do |ns1|
     ns1.vm.box = "ubuntu/trusty64"
+    ns1.landrush.enabled = true
     ns1.landrush.tld = 'dualspark-dev.com'
     ns1.vm.hostname = "ns1.dualspark-dev.com"
     ns1.vm.network "private_network", ip: "172.17.8.106"
@@ -67,6 +70,7 @@ config.vm.define "ns1" do |ns1|
   end
 config.vm.define "ns2" do |ns2|
     ns2.vm.box = "ubuntu/trusty64"
+    ns2.landrush.enabled = true
     ns2.landrush.tld = 'dualspark-dev.com'
     ns2.vm.hostname = "ns2.dualspark-dev.com"
     ns2.vm.network "private_network", ip: "172.17.8.107"
@@ -77,6 +81,7 @@ config.vm.define "ns2" do |ns2|
 
 config.vm.define "cpanel" do |cpanel|
     cpanel.vm.box = "ubuntu/trusty64"
+    cpanel.landrush.enabled = true
     cpanel.landrush.tld = 'dualspark-dev.com'
     cpanel.vm.hostname = "cp.dualspark-dev.com"
     cpanel.vm.network "private_network", ip: "172.17.8.108"
